@@ -2,6 +2,7 @@ import React, { FC } from 'react'
 import Button, { Props as ButtonProps } from '../button/Button'
 import Avatar from '../avatar/Avatar'
 import Icon from '../Icon'
+import Circular from '../progress-indicator/Circular'
 
 export type Props = Pick<ButtonProps, 'appearance' | 'brightness' | 'color' | 'shape' |  'size' | 'width'>
 
@@ -18,7 +19,7 @@ const ButtonDemo: FC<Props> = (props: Props) => (
     <Button
       {...props}
       body='Button'
-      state='active'
+      state='enabled'
     />
     <Button
       {...props}
@@ -71,6 +72,21 @@ const ButtonDemo: FC<Props> = (props: Props) => (
         />
       }
     />
+    <div style={{ position: 'relative', width: '100%' }}>
+      <Button
+        {...props}
+        body=''
+        disabled
+        width='full'
+      />
+      <div style={{ position: 'absolute', top: '50%', left: '50%', transform: 'translate(-50%, -50%)' }}>
+        <Circular
+          max={100}
+          size='m'
+          color='light'
+        />
+      </div>
+    </div>
   </>
 )
 
