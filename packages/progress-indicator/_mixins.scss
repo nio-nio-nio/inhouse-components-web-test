@@ -17,7 +17,7 @@
 
   &[aria-valuenow] > * {
     height: adapter.get-progress-indicator-border-size();
-    background-color: adapter.get-progress-indicator-indicator-surface-color();
+    background-color: adapter.get-progress-indicator-indicator-surface-color($color: base);
   }
 
   @for $i from 0 to 100 {
@@ -33,7 +33,7 @@
       top: 0;
       bottom: 0;
       left: 0;
-      background-color: adapter.get-progress-indicator-indicator-surface-color();
+      background-color: adapter.get-progress-indicator-indicator-surface-color($color: base);
       content: "";
       will-change: left, right;
     }
