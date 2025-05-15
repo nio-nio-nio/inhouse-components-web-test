@@ -17,7 +17,7 @@
 
   &[aria-valuenow] > * {
     height: adapter.get-progress-indicator-border-size();
-    background-color: adapter.get-progress-indicator-indicator-surface-color($color: base);
+    background-color: adapter.get-progress-indicator-indicator-surface-color();
   }
 
   @for $i from 0 to 100 {
@@ -33,7 +33,7 @@
       top: 0;
       bottom: 0;
       left: 0;
-      background-color: adapter.get-progress-indicator-indicator-surface-color($color: base);
+      background-color: adapter.get-progress-indicator-indicator-surface-color();
       content: "";
       will-change: left, right;
     }
@@ -76,12 +76,6 @@
   @each $size in "s", "m", "l" {
     &.-size-#{$size} {
       @include -size-style($size);
-    }
-  }
-
-  @each $color in "base", "light", "dark" {
-    &.-color-#{$color} {
-      @include -color-style($color);
     }
   }
 
@@ -332,12 +326,6 @@
 @mixin -size-style($size) {
   &::after {
     border-width: adapter.get-progress-indicator-border-size($size);
-  }
-}
-
-@mixin -color-style($color) {
-  &::after {
-    border-color: adapter.get-progress-indicator-indicator-surface-color($color);
   }
 }
 
