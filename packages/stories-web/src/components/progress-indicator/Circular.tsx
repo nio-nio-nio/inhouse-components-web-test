@@ -5,7 +5,6 @@ export interface Props {
   max: number
   value?: number
   size?: Extract<Size, 's' | 'm' | 'l'>
-  color?: 'base' | 'light' | 'dark'
 }
 
 const Circular: FC<Props> = (props: Props) => {
@@ -13,17 +12,12 @@ const Circular: FC<Props> = (props: Props) => {
     max,
     value,
     size,
-    color,
     ...rest
   } = props
 
   const classes = ['in-circular-progress-indicator']
   if (typeof size !== 'undefined') {
     classes.push(`-size-${size}`)
-  }
-
-  if (typeof color !== 'undefined') {
-    classes.push(`-color-${color}`)
   }
 
   let percentage

@@ -3,22 +3,16 @@ import React, { FC } from 'react'
 export interface Props {
   max: number
   value?: number
-  color?: 'base'
 }
 
 const Linear: FC<Props> = (props: Props) => {
   const {
     max,
     value,
-    color,
     ...rest
   } = props
 
   const classes = ['in-linear-progress-indicator']
-
-  if (typeof color !== 'undefined') {
-    classes.push(`-color-${color}`)
-  }
 
   let percentage
 
