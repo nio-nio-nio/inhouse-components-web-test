@@ -63,7 +63,7 @@
     left: adapter.get-spacing-size($level: xxs);
     display: block;
     box-sizing: border-box;
-    border-color: var(--my-border-color, adapter.get-progress-indicator-indicator-surface-color());
+    border-color: var(--content-color, adapter.get-progress-indicator-indicator-surface-color());
     border-style: solid;
     border-width: adapter.get-progress-indicator-border-size($size: l);
     border-radius: 50%;
