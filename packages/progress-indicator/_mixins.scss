@@ -53,6 +53,7 @@
   position: relative;
   width: adapter.get-circular-progress-indicator-width();
   height: adapter.get-circular-progress-indicator-height();
+  min-width: adapter.get-circular-progress-indicator-width();
 
   &::after {
     position: absolute;
