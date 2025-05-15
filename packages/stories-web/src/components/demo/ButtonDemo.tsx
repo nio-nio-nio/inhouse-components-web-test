@@ -78,6 +78,7 @@ const ButtonDemo: FC<Props> = (props: Props) => (
       width='full'
       leading={
         <Circular
+          isParentColor
           max={100}
           size='m'
         />

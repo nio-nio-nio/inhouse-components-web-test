@@ -63,7 +63,7 @@
     left: adapter.get-spacing-size($level: xxs);
     display: block;
     box-sizing: border-box;
-    border-color: var(--content-color, adapter.get-progress-indicator-indicator-surface-color());
+    border-color: adapter.get-progress-indicator-indicator-surface-color();
     border-style: solid;
     border-width: adapter.get-progress-indicator-border-size($size: l);
     border-radius: 50%;
@@ -72,6 +72,12 @@
     transition: clip-path 0.1s ease;
     content: "";
     clip-path: polygon(0% 0%, 0% 100%, 100% 100%, 100% 0%, 0% 0%, 50% 50%);
+  }
+
+  &.-is-parent-color {
+    &::after {
+      border-color: currentColor;
+    }
   }
 
   @each $size in "s", "m", "l" {

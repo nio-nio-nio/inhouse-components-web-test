@@ -11,7 +11,6 @@
 
 @mixin style($options: variables.$default-option) {
   $options: map.merge(variables.$default-option, $options);
-  --content-color: currentColor;
 
   @include -proto($options);
   @include -appearance-style(
