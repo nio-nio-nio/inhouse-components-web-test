@@ -11,6 +11,7 @@
 
 @mixin style($options: variables.$default-option) {
   $options: map.merge(variables.$default-option, $options);
+  --my-border-color: currentColor;
 
   @include -proto($options);
   @include -appearance-style(
